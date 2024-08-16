@@ -43,13 +43,17 @@ class ViewController: UIViewController {
       self?.diceImageView2.image = self?.diceArray.randomElement()
     }
 
-    // shake animation
+    // Shake animation
     addShakeAnimation(to: diceImageView1)
     addShakeAnimation(to: diceImageView2)
 
-    // scale animation
+    // Scale animation
     addScaleAnimation(to: diceImageView1)
     addScaleAnimation(to: diceImageView2)
+
+    // Rotation animation
+    addRotationAnimation(to: diceImageView1)
+    addRotationAnimation(to: diceImageView2)
   }
 
   // Stop Dice Animation
@@ -64,6 +68,10 @@ class ViewController: UIViewController {
     // Reset the scale (stop scale animation)
     stopScaleAnimation(for: diceImageView1)
     stopScaleAnimation(for: diceImageView2)
+
+    // Stop rotation animation
+    stopRotationAnimation(for: diceImageView1)
+    stopRotationAnimation(for: diceImageView2)
   }
 
   // More animations
@@ -89,5 +97,21 @@ class ViewController: UIViewController {
   func stopScaleAnimation(for imageView: UIImageView) {
     imageView.layer.removeAnimation(forKey: "scaleAnimation")
     imageView.transform = CGAffineTransform.identity // Reset scale
+  }
+
+  func addRotationAnimation(to imageView: UIImageView) {
+    let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
+    rotationAnimation.fromValue = 0
+    rotationAnimation.toValue = CGFloat.pi * 2 // Full rotation (360 degrees)
+    rotationAnimation.duration = 0.5 // Duration for one rotation
+    rotationAnimation.repeatCount = Float.infinity // Repeat indefinitely
+    rotationAnimation.timingFunction = CAMediaTimingFunction(name: .linear)
+
+    imageView.layer.add(rotationAnimation, forKey: "rotationAnimation")
+  }
+
+  func stopRotationAnimation(for imageView: UIImageView) {
+    imageView.layer.removeAnimation(forKey: "rotationAnimation")
+    imageView.transform = CGAffineTransform.identity // Reset rotation
   }
 }
