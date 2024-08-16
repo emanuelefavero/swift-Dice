@@ -43,9 +43,13 @@ class ViewController: UIViewController {
       self?.diceImageView2.image = self?.diceArray.randomElement()
     }
 
-    // Add shake animation to the dice images
+    // shake animation
     addShakeAnimation(to: diceImageView1)
     addShakeAnimation(to: diceImageView2)
+
+    // scale animation
+    addScaleAnimation(to: diceImageView1)
+    addScaleAnimation(to: diceImageView2)
   }
 
   // Stop Dice Animation
@@ -56,6 +60,10 @@ class ViewController: UIViewController {
     // Set the final dice images
     diceImageView1.image = diceArray.randomElement()
     diceImageView2.image = diceArray.randomElement()
+
+    // Reset the scale (stop scale animation)
+    stopScaleAnimation(for: diceImageView1)
+    stopScaleAnimation(for: diceImageView2)
   }
 
   // More animations
@@ -65,5 +73,21 @@ class ViewController: UIViewController {
     shakeAnimation.keyTimes = [0, 0.25, 0.5, 0.75, 1]
     shakeAnimation.duration = 0.5
     imageView.layer.add(shakeAnimation, forKey: "shake")
+  }
+
+  func addScaleAnimation(to imageView: UIImageView) {
+    let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
+    scaleAnimation.fromValue = 1.0
+    scaleAnimation.toValue = 1.1
+    scaleAnimation.duration = 0.1
+    scaleAnimation.autoreverses = true
+    scaleAnimation.repeatCount = Float.infinity // Repeat indefinitely
+
+    imageView.layer.add(scaleAnimation, forKey: "scaleAnimation")
+  }
+
+  func stopScaleAnimation(for imageView: UIImageView) {
+    imageView.layer.removeAnimation(forKey: "scaleAnimation")
+    imageView.transform = CGAffineTransform.identity // Reset scale
   }
 }
