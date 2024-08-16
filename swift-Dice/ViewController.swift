@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
   }
 
+  //  Main Dice Animation
   func startDiceAnimation() {
     animationTimer?.invalidate() // invalidate previous timers if running
 
@@ -41,8 +42,13 @@ class ViewController: UIViewController {
       self?.diceImageView1.image = self?.diceArray.randomElement()
       self?.diceImageView2.image = self?.diceArray.randomElement()
     }
+
+    // Add shake animation to the dice images
+    addShakeAnimation(to: diceImageView1)
+    addShakeAnimation(to: diceImageView2)
   }
 
+  // Stop Dice Animation
   func stopDiceAnimation() {
     animationTimer?.invalidate()
     animationTimer = nil
@@ -50,5 +56,14 @@ class ViewController: UIViewController {
     // Set the final dice images
     diceImageView1.image = diceArray.randomElement()
     diceImageView2.image = diceArray.randomElement()
+  }
+
+  // More animations
+  func addShakeAnimation(to imageView: UIImageView) {
+    let shakeAnimation = CAKeyframeAnimation(keyPath: "transform.rotation")
+    shakeAnimation.values = [-0.1, 0.1, -0.1, 0.1, 0.0]
+    shakeAnimation.keyTimes = [0, 0.25, 0.5, 0.75, 1]
+    shakeAnimation.duration = 0.5
+    imageView.layer.add(shakeAnimation, forKey: "shake")
   }
 }
