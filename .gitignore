@@ -1,0 +1,43 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+*.xcworkspace
+*.xcuserdata/
+*.xcscheme
+*.xcschemes/
+*.swp
+*.swo
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/
+Carthage/Build/
+
+# Swift Package Manager
+.swiftpm/
+.build/
+
+# Xcode Instruments
+Instruments/
+*.xccheckout
+*.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+
+# Archives
+*.xcarchive
+
+# Playground
+timeline.xctimeline
+playground.xcworkspace
+
+# Xcode Coverage
+*.xccovreport
+*.xccovarchive
+
+# Other
+*.DS_Store
+*.applesoft
+*.hmap
