@@ -16,28 +16,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42C-fS-sXa">
-                                <rect key="frame" x="146" y="363" width="100" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="emanuelefavero.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfy-IP-zT9">
-                                <rect key="frame" x="119" y="441" width="155" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFT-Zp-fto">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoU-fe-uAi">
+                                        <rect key="frame" x="146.66666666666666" y="373" width="100" height="58"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="emanuelefavero.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfy-IP-zT9">
+                                        <rect key="frame" x="119" y="443" width="155" height="19.666666666666686"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="RoU-fe-uAi" firstAttribute="centerX" secondItem="YFT-Zp-fto" secondAttribute="centerX" id="5uw-mg-6hb"/>
+                                    <constraint firstItem="RoU-fe-uAi" firstAttribute="centerY" secondItem="YFT-Zp-fto" secondAttribute="centerY" constant="-24" id="GCe-e0-sTC"/>
+                                    <constraint firstItem="Lfy-IP-zT9" firstAttribute="top" secondItem="RoU-fe-uAi" secondAttribute="bottom" constant="12" id="lCb-L3-tY8"/>
+                                    <constraint firstItem="Lfy-IP-zT9" firstAttribute="centerX" secondItem="YFT-Zp-fto" secondAttribute="centerX" id="y0B-Pz-lbu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YFT-Zp-fto" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom" id="VTj-el-38C"/>
+                            <constraint firstItem="YFT-Zp-fto" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="mVh-kX-45j"/>
+                            <constraint firstItem="YFT-Zp-fto" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="rv1-wk-wcN"/>
+                            <constraint firstItem="YFT-Zp-fto" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="zKm-c3-mUv"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
+            <point key="canvasLocation" x="50.70422535211268" y="370.2290076335878"/>
         </scene>
     </scenes>
     <resources>
