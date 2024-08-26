@@ -31,6 +31,10 @@ class ViewController: UIViewController {
   // Set what to do when the Main view is loaded
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    // Add rounded corners to rollButton
+    rollButton.layer.cornerRadius = rollButton.frame.height / 2
+    rollButton.clipsToBounds = true
   }
 
   //  Main Dice Animation
