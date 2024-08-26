@@ -35,6 +35,10 @@ class ViewController: UIViewController {
     // Add rounded corners to rollButton
     rollButton.layer.cornerRadius = rollButton.frame.height / 2
     rollButton.clipsToBounds = true
+
+    // Add target-actions for touch events
+    rollButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
+    rollButton.addTarget(self, action: #selector(buttonTouchUp), for: [.touchUpInside, .touchUpOutside])
   }
 
   //  Main Dice Animation
@@ -117,5 +121,20 @@ class ViewController: UIViewController {
   func stopRotationAnimation(for imageView: UIImageView) {
     imageView.layer.removeAnimation(forKey: "rotationAnimation")
     imageView.transform = CGAffineTransform.identity // Reset rotation
+  }
+
+  // Roll Button Touch Down and Up Animations
+  @objc func buttonTouchDown(_ sender: UIButton) {
+    // Shrink the button when pressed
+    UIView.animate(withDuration: 0.1, animations: {
+      sender.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
+    })
+  }
+
+  @objc func buttonTouchUp(_ sender: UIButton) {
+    // Restore the button to its original size when released
+    UIView.animate(withDuration: 0.1, animations: {
+      sender.transform = CGAffineTransform.identity
+    })
   }
 }
