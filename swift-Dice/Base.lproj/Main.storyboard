@@ -23,17 +23,16 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W95-rO-Tzx" userLabel="Top View">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="252.33333333333334"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="woy-0H-uMY">
-                                                <rect key="frame" x="116.66666666666669" y="73.666666666666657" width="160" height="105"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="160" id="ChF-Zu-27X"/>
-                                                    <constraint firstAttribute="height" constant="105" id="rQx-Oh-Ts5"/>
-                                                </constraints>
-                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdZ-Xz-bAQ">
+                                                <rect key="frame" x="141.66666666666666" y="97.666666666666657" width="109.66666666666666" height="57.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="woy-0H-uMY" firstAttribute="centerX" secondItem="W95-rO-Tzx" secondAttribute="centerX" id="7uG-cP-SMJ"/>
-                                            <constraint firstItem="woy-0H-uMY" firstAttribute="centerY" secondItem="W95-rO-Tzx" secondAttribute="centerY" id="bKM-UT-4pb"/>
+                                            <constraint firstItem="ZdZ-Xz-bAQ" firstAttribute="centerX" secondItem="W95-rO-Tzx" secondAttribute="centerX" id="87l-FN-XMO"/>
+                                            <constraint firstItem="ZdZ-Xz-bAQ" firstAttribute="centerY" secondItem="W95-rO-Tzx" secondAttribute="centerY" id="ePD-4F-HzX"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="INn-RC-NJN" userLabel="Middle View">
@@ -103,7 +102,6 @@
     <resources>
         <image name="DiceOne" width="100" height="100"/>
         <image name="DiceTwo" width="100" height="100"/>
-        <image name="DiceeLogo" width="196" height="128"/>
         <namedColor name="ButtonBackgroundColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
