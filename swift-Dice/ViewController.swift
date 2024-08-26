@@ -125,6 +125,10 @@ class ViewController: UIViewController {
 
   // Roll Button Touch Down and Up Animations
   @objc func buttonTouchDown(_ sender: UIButton) {
+    // Trigger haptic feedback
+    let generator = UIImpactFeedbackGenerator(style: .light)
+    generator.impactOccurred()
+
     // Shrink the button when pressed
     UIView.animate(withDuration: 0.1, animations: {
       sender.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
