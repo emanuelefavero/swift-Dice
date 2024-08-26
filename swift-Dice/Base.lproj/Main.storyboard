@@ -16,9 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="G1E-lC-ErU">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="EMF-2g-tu4">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
@@ -59,7 +56,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nG-rQ-U3f" userLabel="Bottom View">
-                                        <rect key="frame" x="0.0" y="506.66666666666652" width="393" height="252.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="506.66666666666657" width="393" height="252.33333333333331"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRn-bt-lRl">
                                                 <rect key="frame" x="143" y="98.333333333333371" width="107" height="56"/>
@@ -86,14 +83,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="G1E-lC-ErU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="ERJ-nO-RMN"/>
-                            <constraint firstItem="G1E-lC-ErU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MCH-kk-nFn"/>
                             <constraint firstItem="EMF-2g-tu4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PvL-xI-kjB"/>
                             <constraint firstItem="EMF-2g-tu4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="S93-07-rR0"/>
-                            <constraint firstItem="G1E-lC-ErU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="d6p-qg-t9d"/>
                             <constraint firstItem="EMF-2g-tu4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ir7-zs-zVv"/>
                             <constraint firstItem="EMF-2g-tu4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kEk-RT-XpA"/>
-                            <constraint firstAttribute="bottom" secondItem="G1E-lC-ErU" secondAttribute="bottom" id="poq-6X-WmI"/>
                         </constraints>
                     </view>
                     <connections>
@@ -111,7 +104,6 @@
         <image name="DiceOne" width="100" height="100"/>
         <image name="DiceTwo" width="100" height="100"/>
         <image name="DiceeLogo" width="196" height="128"/>
-        <image name="GreenBackground" width="444.66665649414062" height="414.33334350585938"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
